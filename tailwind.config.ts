@@ -22,6 +22,13 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
+        },
+        wellness: {
+          sky: "hsl(var(--wellness-sky))",
+          gold: "hsl(var(--wellness-gold))",
+          sage: "hsl(var(--wellness-sage))",
+          coral: "hsl(var(--wellness-coral))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
