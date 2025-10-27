@@ -43,12 +43,20 @@ const Index = () => {
           </div>
         </section>
 
-        <NatureSection
-          title="Nature Inspired Solutions"
-          subtitle="Harnessing the power of nature for your wellness journey"
-          image={lavenderImage}
-          align="left"
-        />
+        <section className="grid md:grid-cols-2 gap-1">
+          <NatureSection
+            title="Nature Inspired Solutions"
+            subtitle="Discover our ingredient philosophy"
+            image={lavenderImage}
+            align="left"
+          />
+          <NatureSection
+            title="Putting Nature to Work"
+            subtitle="Learn how we harness nature's power"
+            image={leavesImage}
+            align="left"
+          />
+        </section>
 
         <section className="container mx-auto px-4 py-16">
           <div className="text-center max-w-3xl mx-auto">
@@ -63,13 +71,6 @@ const Index = () => {
             </p>
           </div>
         </section>
-
-        <NatureSection
-          title="Putting Nature to Work"
-          subtitle="Science-backed formulas from natural ingredients"
-          image={leavesImage}
-          align="right"
-        />
 
         <section className="bg-muted py-16">
           <div className="container mx-auto px-4">
@@ -91,44 +92,23 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="bg-primary text-primary-foreground py-12">
+      <footer className="bg-primary text-primary-foreground py-8">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">About Us</h3>
-              <ul className="space-y-2 text-sm opacity-90">
-                <li><a href="#" className="hover:underline">Our Story</a></li>
-                <li><a href="#" className="hover:underline">Our Mission</a></li>
-                <li><a href="#" className="hover:underline">Leadership</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Products</h3>
-              <ul className="space-y-2 text-sm opacity-90">
-                <li><a href="#" className="hover:underline">Supplements</a></li>
-                <li><a href="#" className="hover:underline">Personal Care</a></li>
-                <li><a href="#" className="hover:underline">Home Care</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Support</h3>
-              <ul className="space-y-2 text-sm opacity-90">
-                <li><a href="#" className="hover:underline">Contact Us</a></li>
-                <li><a href="#" className="hover:underline">FAQs</a></li>
-                <li><a href="#" className="hover:underline">Shipping Info</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Connect</h3>
-              <ul className="space-y-2 text-sm opacity-90">
-                <li><a href="#" className="hover:underline">Facebook</a></li>
-                <li><a href="#" className="hover:underline">Instagram</a></li>
-                <li><a href="#" className="hover:underline">Twitter</a></li>
-              </ul>
-            </div>
+          <div className="flex flex-wrap justify-center gap-6 text-sm mb-6">
+            <a href="#" className="hover:underline">About Us</a>
+            <span className="text-white/40">|</span>
+            <a href="#" className="hover:underline">Our Story</a>
+            <span className="text-white/40">|</span>
+            <a href="#" className="hover:underline">Products</a>
+            <span className="text-white/40">|</span>
+            <a href="#" className="hover:underline">Contact</a>
+            <span className="text-white/40">|</span>
+            <a href="#" className="hover:underline">Privacy Policy</a>
+            <span className="text-white/40">|</span>
+            <a href="#" className="hover:underline">Terms of Use</a>
           </div>
-          <div className="border-t border-white/20 pt-8 text-center text-sm opacity-75">
-            <p>&copy; 2025 PureLife Wellness. All rights reserved.</p>
+          <div className="text-center text-sm opacity-75">
+            <p>&copy; 2025 PureLife Wellness Company. All rights reserved.</p>
           </div>
         </div>
       </footer>
