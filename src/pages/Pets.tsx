@@ -1,96 +1,83 @@
 import { Navigation } from "@/components/Navigation";
-import { HeroCarousel } from "@/components/HeroCarousel";
-import { CategoryCard } from "@/components/CategoryCard";
-import { NatureSection } from "@/components/NatureSection";
-import cleaningImage from "@/assets/category-cleaning.jpg";
-import supplementsImage from "@/assets/category-supplements.jpg";
-import personalCareImage from "@/assets/category-personal-care.jpg";
-import beautyImage from "@/assets/category-beauty.jpg";
-import lavenderImage from "@/assets/nature-lavender.jpg";
-import leavesImage from "@/assets/nature-leaves.jpg";
+import racaoImg from "@/assets/melaleuca_racao_branco.png";
+import snacksImg from "@/assets/snacks.png";
 import backgroundImg from "@/assets/background.jpg";
+import dogBackgroundImg from "@/assets/dog-background-1.jpg";
 
-const Index = () => {
+const Pets = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main>
-        <HeroCarousel />
+      
+      {/* Banner */}
+      <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+        <img 
+          src={dogBackgroundImg} 
+          alt="Pets" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-6">Pets</h1>
         
-        <section className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <CategoryCard
-              title="Home Cleaning"
-              subtitle="and Laundry"
-              image={cleaningImage}
-              bgColor="bg-wellness-sky"
-            />
-            <CategoryCard
-              title="Supplements"
-              subtitle="and Foods"
-              image={supplementsImage}
-              bgColor="bg-wellness-gold"
-            />
-            <CategoryCard
-              title="Personal Care"
-              image={personalCareImage}
-              bgColor="bg-wellness-sage"
-            />
-            <CategoryCard
-              title="Beauty"
-              image={beautyImage}
-              bgColor="bg-wellness-coral"
-            />
-          </div>
-        </section>
+        <div className="mb-4">
+          <span className="text-sm text-muted-foreground">
+            <b>2</b> products
+          </span>
+        </div>
 
-        <section className="grid md:grid-cols-2 gap-1">
-          <NatureSection
-            title="Nature Inspired Solutions"
-            subtitle="Discover our ingredient philosophy"
-            image={lavenderImage}
-            align="left"
-          />
-          <NatureSection
-            title="Putting Nature to Work"
-            subtitle="Learn how we harness nature's power"
-            image={leavesImage}
-            align="left"
-          />
-        </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {/* Produto 1 - Ração */}
+          <article className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow">
+            <a href="/productstore/pets/dog-food" className="block">
+              <div className="aspect-square bg-white flex items-center justify-center p-4">
+                <img src={racaoImg} alt="Premium Dog Food" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2 text-foreground">Premium Dog Food</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Natural, nutritious formula for your furry friend
+                </p>
+                <div className="space-y-2">
+                  <div>
+                    <span className="text-2xl font-bold text-green-600">$24.99</span>
+                    <span className="text-sm text-muted-foreground block">Member</span>
+                  </div>
+                  <div>
+                    <span className="text-base font-bold line-through text-muted-foreground">$32.00</span>
+                    <span className="text-sm text-muted-foreground block">Non-Member</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
 
-        <section className="container mx-auto px-4 py-16">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6 text-foreground">
-              Committed to Your Wellness
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              For over 35 years, we've been dedicated to creating products that enhance lives. 
-              Our commitment to quality, safety, and sustainability drives everything we do. 
-              From our nature-inspired formulations to our eco-friendly packaging, we're here 
-              to help you and your family thrive.
-            </p>
-          </div>
-        </section>
-
-        <section className="bg-muted py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">400+</div>
-                <p className="text-lg text-foreground">Exclusive Products</p>
+          {/* Produto 2 - Snacks */}
+          <article className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow">
+            <a href="/productstore/pets/dog-treats" className="block">
+              <div className="aspect-square bg-white flex items-center justify-center p-4">
+                <img src={snacksImg} alt="Healthy Dog Treats" className="max-w-full max-h-full object-contain" />
               </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">35+</div>
-                <p className="text-lg text-foreground">Years of Excellence</p>
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2 text-foreground">Healthy Dog Treats</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Delicious, organic snacks your dog will love
+                </p>
+                <div className="space-y-2">
+                  <div>
+                    <span className="text-2xl font-bold text-green-600">$12.99</span>
+                    <span className="text-sm text-muted-foreground block">Member</span>
+                  </div>
+                  <div>
+                    <span className="text-base font-bold line-through text-muted-foreground">$18.00</span>
+                    <span className="text-sm text-muted-foreground block">Non-Member</span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                <p className="text-lg text-foreground">Satisfaction Guaranteed</p>
-              </div>
-            </div>
-          </div>
-        </section>
+            </a>
+          </article>
+        </div>
       </main>
 
       <footer 
@@ -195,4 +182,5 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Pets;
+
