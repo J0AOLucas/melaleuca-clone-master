@@ -1,6 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import racaoImg from "@/assets/melaleuca_racao_branco.png";
-import snacksImg from "@/assets/snacks.png";
+import snacksImg from "@/assets/snacks.jpeg";
+import cleaningImg from "@/assets/cleaning.jpeg";
+import shampooImg from "@/assets/shampoo.jpeg";
 import backgroundImg from "@/assets/background.jpg";
 import dogBackgroundImg from "@/assets/dog-background-1.jpg";
 
@@ -16,6 +18,20 @@ const Pets = () => {
           alt="Pets" 
           className="w-full h-full object-cover"
         />
+        {/* Overlay e texto do banner */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl">
+              <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow">
+                Natural care for happier dogs
+              </h2>
+              <p className="mt-3 md:mt-4 text-white/90 text-sm md:text-base lg:text-lg drop-shadow">
+                Gentle formulas inspired by nature to protect skin, coat, and well‑being—because your best friend deserves the best every day.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <main className="container mx-auto px-4 py-8">
@@ -23,7 +39,7 @@ const Pets = () => {
         
         <div className="mb-4">
           <span className="text-sm text-muted-foreground">
-            <b>2</b> products
+            <b>4</b> products
           </span>
         </div>
 
@@ -53,14 +69,14 @@ const Pets = () => {
             </a>
           </article>
 
-          {/* Produto 2 - Snacks */}
+          {/* Produto 2 - Dog Snack */}
           <article className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow">
             <a href="/productstore/pets/dog-treats" className="block">
               <div className="aspect-square bg-white flex items-center justify-center p-4">
-                <img src={snacksImg} alt="Healthy Dog Treats" className="max-w-full max-h-full object-contain" />
+                <img src={snacksImg} alt="Dog Snack" className="max-w-full max-h-full object-contain" />
               </div>
               <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2 text-foreground">Healthy Dog Treats</h3>
+                <h3 className="font-semibold text-lg mb-2 text-foreground">Dog Snack</h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Delicious, organic snacks your dog will love
                 </p>
@@ -77,6 +93,58 @@ const Pets = () => {
               </div>
             </a>
           </article>
+
+          {/* Produto 3 - Dog Cleaning Kit */}
+          <article className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow">
+            <a href="/productstore/pets/dog-cleaning-kit" className="block">
+              <div className="aspect-square bg-white flex items-center justify-center p-4">
+                <img src={cleaningImg} alt="Dog Cleaning Kit" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2 text-foreground">Dog Cleaning Kit</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Complete hygiene kit for your dog's daily care
+                </p>
+                <div className="space-y-2">
+                  <div>
+                    <span className="text-2xl font-bold text-green-600">$19.99</span>
+                    <span className="text-sm text-muted-foreground block">Member</span>
+                  </div>
+                  <div>
+                    <span className="text-base font-bold line-through text-muted-foreground">$26.00</span>
+                    <span className="text-sm text-muted-foreground block">Non-Member</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          {/* Produto 4 - Shampoo & Conditioner */}
+          <article className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow">
+            <a href="/productstore/pets/shampoo-conditioner" className="block">
+              <div className="aspect-square bg-white flex items-center justify-center p-4">
+                <img src={shampooImg} alt="Shampoo & Conditioner" className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2 text-foreground">Shampoo & Conditioner</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Gentle formula for shiny, healthy coats
+                </p>
+                <div className="space-y-2">
+                  <div>
+                    <span className="text-2xl font-bold text-green-600">$14.99</span>
+                    <span className="text-sm text-muted-foreground block">Member</span>
+                  </div>
+                  <div>
+                    <span className="text-base font-bold line-through text-muted-foreground">$20.00</span>
+                    <span className="text-sm text-muted-foreground block">Non-Member</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          
         </div>
       </main>
 
